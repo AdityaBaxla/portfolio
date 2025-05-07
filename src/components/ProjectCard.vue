@@ -2,7 +2,7 @@
   <div class="project-card">
     <h2>{{ title }}</h2>
     <p>{{ description }}</p>
-    <a :href="link" target="_blank">View Project</a>
+    <!-- <a :href="link" target="_blank">View Project</a> -->
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style scoped>
-.project-card {
+/* .project-card {
   margin: 2rem 0;
-}
+} */
 </style>

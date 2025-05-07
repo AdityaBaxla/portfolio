@@ -1,9 +1,10 @@
 <template>
   <div>
     <HeroSection />
+    <hr class="mt-12 mb-12 text-gray-200" />
     <ScrollText text="Featured Projects" />
     <ProjectCard
-      title="Portfolio Website"
+      title="Featured Projects"
       description="A minimal portfolio built with Vue.js."
       link="#"
     />

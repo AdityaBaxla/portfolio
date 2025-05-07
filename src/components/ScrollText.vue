@@ -11,10 +11,10 @@ export default {
 </script>
 
 <style scoped>
-.scroll-text {
+/* .scroll-text {
   text-align: center;
   margin: 2rem 0;
   font-size: 1.25rem;
   font-weight: bold;
-}
+} */
 </style>
