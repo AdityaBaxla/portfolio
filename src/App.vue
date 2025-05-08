@@ -2,7 +2,7 @@
   <!-- outer flex wrapper -->
   <div class="flex justify-center pt-10">
     <!-- inner constrained box -->
-    <div class="w-full max-w-4xl px-30 flex flex-col mt-10 gap-y-10">
+    <div class="w-full max-w-4xl px-5 md:px-30 flex flex-col mt-10 gap-y-10">
       <NavbarComp />
       <router-view />
       <FooterComponent />
@@ -18,11 +18,4 @@ export default {
 }
 </script>
 
-<style scoped>
-/* .main-container {
-  margin: 5rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-} */
-</style>
+<style scoped></style>
