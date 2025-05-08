@@ -1,9 +1,9 @@
 <template>
   <section class="px-4">
-    <h3 class="text-2xl text-black font-[600]">Recent Posts</h3>
+    <h3 class="text-2xl text-black font-[600] mb-5">Recent Posts</h3>
 
     <!-- center items in each column -->
-    <div class="gap-10 mt-7 justify-items-center">
+    <div class="grid gap-10 mb-5">
       <ArticleCard
         title="How to Build a Design System"
         description="A comprehensive guide to building a design system from scratch."

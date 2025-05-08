@@ -4,7 +4,7 @@
     <p class="text-lg text-gray-600 font-[500] mt-4">Here's a list of my best projects.</p>
 
     <!-- center items in each column -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7 justify-items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7 justify-items-center -mx-30">
       <ProjectCard
         title="Hannkyy Putty"
         description="A vue project based on lorem ipsum and stuff"
