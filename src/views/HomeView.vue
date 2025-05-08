@@ -2,12 +2,9 @@
   <div>
     <HeroSection />
     <hr class="mt-12 mb-12 text-gray-200" />
-    <ScrollText text="Featured Projects" />
-    <ProjectCard
-      title="Featured Projects"
-      description="A minimal portfolio built with Vue.js."
-      link="#"
-    />
+    <ProjectsSection />
+    <hr class="mt-12 mb-12 text-gray-200" />
+    <ArticleSection />
   </div>
 </template>
 
@@ -15,8 +12,10 @@
 import HeroSection from '../components/HeroSection.vue'
 import ScrollText from '../components/ScrollText.vue'
 import ProjectCard from '../components/ProjectCard.vue'
+import ProjectsSection from '@/components/ProjectsSection.vue'
+import ArticleSection from '@/components/ArticleSection.vue'
 
 export default {
-  components: { HeroSection, ScrollText, ProjectCard },
+  components: { HeroSection, ScrollText, ProjectCard, ProjectsSection, ArticleSection },
 }
 </script>

@@ -7,7 +7,7 @@
       experience in full-stack development, specializing in JavaScript frameworks like Vue.js and
       React.
     </p>
-    <ButtonComp class="mt-7" text="More Information" />
+    <ButtonComp class="mt-7" text="More Information" @click="$router.push('/information')" />
   </section>
 </template>
 
