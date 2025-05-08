@@ -1,34 +1,45 @@
-name: Deploy Frontend to Remote Server
+name: Deploy Vue Frontend to Flask
 
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy-frontend:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies & build
         run: |
+          cd frontend  # change this if your Vue project is elsewhere
           npm install
           npm run build
 
-      - name: Setup SSH
+      - name: Setup SSH access
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Upload built frontend to server
+      - name: Deploy built frontend to Flask server
         run: |
-          scp -r dist/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/first-deployment/templates/
+          # Copy index.html to Flask templates/
+          scp frontend/dist/index.html ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/aditya/first-deployment/templates/
+
+          # Copy assets to Flask static/
+          scp -r frontend/dist/assets ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/aditya/first-deployment/static/
+
+      - name: Restart Flask app via Supervisor
+        run: |
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            sudo supervisorctl restart portfolio
+          EOF
