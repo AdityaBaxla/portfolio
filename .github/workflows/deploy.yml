@@ -19,7 +19,6 @@ jobs:
 
       - name: Install dependencies & build
         run: |
-          cd frontend  # change this if your Vue project is elsewhere
           npm install
           npm run build
 
@@ -33,10 +32,10 @@ jobs:
       - name: Deploy built frontend to Flask server
         run: |
           # Copy index.html to Flask templates/
-          scp frontend/dist/index.html ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/aditya/first-deployment/templates/
+          scp dist/index.html ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/aditya/first-deployment/templates/
 
           # Copy assets to Flask static/
-          scp -r frontend/dist/assets ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/aditya/first-deployment/static/
+          scp -r dist/assets ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/aditya/first-deployment/static/
 
       - name: Restart Flask app via Supervisor
         run: |
