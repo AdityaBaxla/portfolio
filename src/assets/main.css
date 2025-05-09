@@ -18,11 +18,11 @@ a:hover {
   text-decoration: underline;
 } */
 
-@layer base {
+/* @layer base {
   a {
     @apply text-black no-underline;
   }
-}
+} */
 
 /* #app {
   max-width: 1280px;
