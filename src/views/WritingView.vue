@@ -1,15 +1,46 @@
 <template>
   <h1 class="text-4xl font-[500]">Writing</h1>
   <hr class="mt-5 mb-5 text-gray-200 -mx-4" />
-  <WritingCardComp></WritingCardComp>
+  <ArticleCard
+    date="6th Jan 2025"
+    description="Ullamco reprehenderit irure voluptate laborum eu in mollit ipsum cillum exercitation dolore."
+    title="Ullamco sint est dolor anim"
+  ></ArticleCard>
+  <hr class="text-gray-200" />
+  <ArticleCard
+    date="6th Jan 2025"
+    description="Ullamco reprehenderit irure voluptate laborum eu in mollit ipsum cillum exercitation dolore."
+    title="Ullamco sint est dolor anim"
+  ></ArticleCard>
+  <hr class="text-gray-200" />
+  <ArticleCard
+    date="6th Jan 2025"
+    description="Ullamco reprehenderit irure voluptate laborum eu in mollit ipsum cillum exercitation dolore."
+    title="Ullamco sint est dolor anim"
+  ></ArticleCard>
+  <hr class="text-gray-200" />
+  <ArticleCard
+    date="6th Jan 2025"
+    description="Ullamco reprehenderit irure voluptate laborum eu in mollit ipsum cillum exercitation dolore."
+    title="Ullamco sint est dolor anim"
+  ></ArticleCard>
+  <hr class="text-gray-200" />
+
+  <ArticleCard
+    date="6th Jan 2025"
+    description="Ullamco reprehenderit irure voluptate laborum eu in mollit ipsum cillum exercitation dolore."
+    title="Ullamco sint est dolor anim"
+  ></ArticleCard>
+  <hr class="text-gray-200" />
 </template>
 
 <script>
+import ArticleCard from '@/components/ArticleCard.vue'
 import WritingCardComp from '@/components/WritingCardComp.vue'
 
 export default {
   name: 'ExperienceSection',
-  components: { WritingCardComp },
+  components: { WritingCardComp, ArticleCard },
   data() {
     return {
       experiences: [

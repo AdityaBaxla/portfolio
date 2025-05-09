@@ -5,6 +5,7 @@ import About from '../views/AboutView.vue'
 import NotFound from '../views/NotFoundView.vue'
 import InformationView from '@/views/InformationView.vue'
 import WritingView from '@/views/WritingView.vue'
+import ContactView from '@/views/ContactView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -12,6 +13,7 @@ const routes = [
   { path: '/about', name: 'About', component: About },
   { path: '/information', name: 'information', component: InformationView },
   { path: '/writing', name: 'writing', component: WritingView },
+  { path: '/contact', name: 'contact', component: ContactView },
 
   // Catch-all route for 404 Not Found
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },

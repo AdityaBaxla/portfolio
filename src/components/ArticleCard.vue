@@ -1,10 +1,8 @@
 <template>
-  <article
-    class="bg-slate-50 hover:bg-slate-200 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full"
-  >
-    <h2 class="text-xl font-bold mb-1">{{ title }}</h2>
+  <article class="p-4 flex flex-col gap-2 rounded-lg transition-shadow duration-300 w-full">
+    <h2 class="text-2xl mb-1">{{ title }}</h2>
     <p class="text-sm font-mono text-gray-500">{{ date }}</p>
-    <p class="text-gray-700">{{ description }}</p>
+    <p class="text-gray-800 font-[300]">{{ description }}</p>
   </article>
 </template>
 
