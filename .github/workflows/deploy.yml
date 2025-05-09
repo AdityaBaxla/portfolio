@@ -40,5 +40,5 @@ jobs:
       - name: Restart Flask app via Supervisor
         run: |
           ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
-            sudo supervisorctl restart portfolio
+          sudo /usr/bin/supervisorctl restart portfolio
           EOF
