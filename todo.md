@@ -7,5 +7,5 @@
 - [ ] Add the work experience in the homepage.
 - [ ] Possibly make more unique
 - [ ] Add dark mode
-- [ ] Posts page with the
-- [ ]
+- [ ] Posts page with the link to post
+- [ ] Dynamic content from flask having the api.
