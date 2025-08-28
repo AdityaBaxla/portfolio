@@ -1,7 +1,7 @@
 <template>
-  <section class="px-6 md:px-10 py-12 max-w-3xl mx-auto">
+  <section>
     <h1 class="text-4xl font-[500]">Contact</h1>
-    <hr class="mt-5 mb-10 text-gray-200 -mx-4" />
+    <hr class="mt-5 mb-5 text-gray-200 -mx-4" />
 
     <p class="text-lg text-gray-600 font-[200] mb-8">
       I’m always open to thoughtful conversations, project ideas, or collaborations. Whether it’s a

@@ -8,7 +8,8 @@ export default defineConfig(({ command }) => {
   const isProduction = command === 'build'
 
   return {
-    base: isProduction ? '/static/' : '/',
+    // base: isProduction ? '/static/' : '/',
+    base: '/',
     plugins: [vue(), vueDevTools(), tailwindcss()],
     resolve: {
       alias: {
