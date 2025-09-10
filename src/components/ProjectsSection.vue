@@ -6,11 +6,20 @@
     <!-- center items in each column -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-7 mt-7 justify-items-center -mx-30">
       <ProjectCard
-        title="Hannkyy Putty"
-        description="A vue project based on lorem ipsum and stuff"
+        title="Git Tracker"
+        description="Tracking student's project status via github commits, using RAG pipeline to validate the code"
+        :image_src="gittracker"
       />
-      <ProjectCard title="Another Project" description="More lorem ipsum here" />
-      <ProjectCard title="Third Project" description="Even more lorem ipsum" />
+      <ProjectCard
+        title="Mentorship Portal (Contributor)"
+        description="Connect course mentors and mentees"
+        :image_src="mentorship"
+      />
+      <ProjectCard
+        title="Appdev Docs"
+        description="Full documentation for Appdev Courses"
+        :image_src="appdevdocs"
+      />
     </div>
 
     <ButtonComp class="mt-7" text="All Projects" @click="$router.push('/projects')" />
@@ -21,9 +30,9 @@
 import ButtonComp from './ButtonComp.vue'
 import ProjectCard from './ProjectCard.vue'
 
-import image1 from '../assets/images/flagdb.webp'
-import image2 from '@/assets/images/awesome-design-systems.webp'
-import image3 from '@/assets/images/linky.webp'
+import gittracker from '../assets/images/project_ss/gittracker.png'
+import mentorship from '@/assets/images/project_ss/mentorship.png'
+import appdevdocs from '@/assets/images/project_ss/appdevdocs.png'
 
 export default {
   name: 'ProjectsSection',
