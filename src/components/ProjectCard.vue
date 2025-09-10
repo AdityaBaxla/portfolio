@@ -4,7 +4,7 @@
   >
     <!-- Image wrapper enforces 16:9 -->
     <div class="aspect-video w-full rounded-xl overflow-hidden">
-      <img :src="image_src" alt="" class="object-cover w-full h-full" />
+      <img :src="image_src" alt="project image" class="object-cover w-full h-full" />
     </div>
 
     <!-- Content -->
@@ -19,16 +19,13 @@
 </template>
 
 <script>
-import image from '@/assets/images/awesome-design-systems.webp'
-import imag1 from '../assets/images/linky.webp'
-
 export default {
   name: 'ProjectCard',
   props: {
     title: { type: String, required: true },
     description: { type: String, required: true },
     link: { type: String, required: false },
-    image_src: { type: String, required: true },
+    image_src: { required: true },
     // image: { type: String, required: true },
   },
   data() {

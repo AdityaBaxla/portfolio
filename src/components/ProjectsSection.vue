@@ -31,11 +31,18 @@ import ButtonComp from './ButtonComp.vue'
 import ProjectCard from './ProjectCard.vue'
 
 import gittracker from '../assets/images/project_ss/gittracker.png'
-import mentorship from '@/assets/images/project_ss/mentorship.png'
-import appdevdocs from '@/assets/images/project_ss/appdevdocs.png'
+import mentorship from '../assets/images/project_ss/mentorship.png'
+import appdevdocs from '../assets/images/project_ss/appdevdocs.png'
 
 export default {
   name: 'ProjectsSection',
+  data() {
+    return {
+      gittracker,
+      mentorship,
+      appdevdocs,
+    }
+  },
   components: {
     ButtonComp,
     ProjectCard,
